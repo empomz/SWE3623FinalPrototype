@@ -6,25 +6,24 @@ import java.io.FileWriter;
 import java.io.IOException;
 public class AccountCreationScreen extends JFrame{
     private JPanel windowPanel;
+
+    private JLabel KSU_Logo;
     private JButton joinButton;
-    private JLabel logo;
     private JTextField fullName;
     private JLabel fName;
     private JLabel lName;
     private JTextField username;
     private JLabel pName;
     private JTextField phoneNumber;
-    private JLabel eAddress;
     private JTextField emailAddress;
     private JLabel pWord;
     private JTextField password;
     private JLabel cNum;
     private JTextField CardNumber;
-    private JLabel sCode;
-    private JTextField SecurityCode;
     private JLabel zCode;
     private JTextField zipCode;
     private JLabel reqDisclaimer;
+    private JButton button1;
 
     private String newName;
     private String newPassword;
@@ -41,7 +40,7 @@ public class AccountCreationScreen extends JFrame{
         setContentPane(windowPanel);
         setTitle("Login");
         setDefaultCloseOperation(EXIT_ON_CLOSE);
-        setSize(550, 330);
+        setSize(330, 550);
         setLocationRelativeTo(null);
         setVisible(true);
 
@@ -50,7 +49,7 @@ public class AccountCreationScreen extends JFrame{
 
         Font font = new Font("Plain", Font.PLAIN, (int) width / 25);
 
-        setMinimumSize(new Dimension(1920, 1080));
+        setMinimumSize(new Dimension(1080, 1350));
 
 
         joinButton.addActionListener(new ActionListener() {
@@ -102,14 +101,14 @@ public class AccountCreationScreen extends JFrame{
                     }
                 });
 
-            Customer newCustomer = new Customer(newName,newUsername,newPassword,newAddress,newPhoneNumber,newCardInfo);
+            Student newStudent = new Student(newName,newUsername,newPassword,newAddress,newPhoneNumber,newCardInfo);
             try {
-                FileWriter myWriter = new FileWriter("CustomerInfo.txt");
-                myWriter.write(newCustomer.getName());
-                myWriter.write(newCustomer.getUsername());
-                myWriter.write(newCustomer.getPassword());
-                myWriter.write(newCustomer.getPhoneNumber());
-                myWriter.write(newCustomer.getCardInfo());
+                FileWriter myWriter = new FileWriter("StudentInfo.txt");
+                myWriter.write(newStudent.getName());
+                myWriter.write(newStudent.getUsername());
+                myWriter.write(newStudent.getPassword());
+                myWriter.write(newStudent.getPhoneNumber());
+                myWriter.write(newStudent.getCardInfo());
                 myWriter.close();
             } catch (IOException a){
                 System.out.println("An error occured.");
@@ -118,7 +117,7 @@ public class AccountCreationScreen extends JFrame{
 
             if (e.getSource()==joinButton){
                 dispose();
-                LoginScreen myLoginScreen = new LoginScreen();
+
             }
 
             }

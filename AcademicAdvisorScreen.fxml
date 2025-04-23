@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.collections.FXCollections?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Spinner?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane prefHeight="700" prefWidth="500" style="-fx-background-color: white;" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/23.0.1" fx:controller="com.example.project.AcademicAdvisorScreenController">
+
+   <!-- Header -->
+   <HBox alignment="CENTER_LEFT" layoutX="138.0" layoutY="23.0" spacing="10" AnchorPane.leftAnchor="138.0" AnchorPane.topAnchor="23.0">
+      <Label prefHeight="32.0" prefWidth="182.0" style="-fx-font-size: 22px; -fx-font-weight: bold;" text="KSU Student App" />
+      <ImageView fitHeight="49.0" fitWidth="56.0" preserveRatio="true">
+         <image>
+            <Image url="@ksu_logo.png" />
+         </image>
+      </ImageView>
+   </HBox>
+
+
+   <!-- Navigation Bar -->
+   <HBox alignment="CENTER" layoutX="81.0" layoutY="82.0" spacing="15" AnchorPane.leftAnchor="81.0">
+      <Button onAction="#goToMain" text="Main" />
+      <Button onAction="#goToProfile" text="Profile" />
+      <Button onAction="#goToSchedule" text="Schedule" />
+      <Button onAction="#goToAdvisor" text="Advisor" />
+      <Button onAction="#logout" text="Logout" />
+   </HBox>
+
+   <!-- Main Content -->
+   <VBox alignment="TOP_CENTER" layoutX="15.0" layoutY="126.0" prefHeight="553.0" prefWidth="471.0" spacing="15" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="14.0">
+      <Label style="-fx-font-size: 20px; -fx-font-weight: bold;" text="Academic Advisor" />
+
+      <ImageView fitHeight="100" fitWidth="120" preserveRatio="true">
+         <image>
+            <Image url="@ksu_owl.png" />
+         </image>
+      </ImageView>
+
+      <!-- Appointment Type -->
+      <Label style="-fx-font-size: 16px;" text="Type of Appointment" />
+      <ComboBox fx:id="appointmentTypeComboBox">
+         <items>
+            <FXCollections fx:factory="observableArrayList">
+               <String fx:value="Academic Schedule" />
+               <String fx:value="Add / Drop Class" />
+               <String fx:value="Career Planning" />
+               <String fx:value="Recommended" />
+            </FXCollections>
+         </items>
+      </ComboBox>
+
+      <!-- Date and Time -->
+      <Label style="-fx-font-size: 16px;" text="Date and Time of Appointment" />
+      <DatePicker fx:id="datePicker" />
+      <HBox alignment="TOP_CENTER" prefWidth="344.0" spacing="10">
+         <Spinner fx:id="hourSpinner" prefWidth="80" />
+         <Spinner fx:id="minuteSpinner" prefWidth="80" />
+      </HBox>
+
+      <!-- Format -->
+      <Label style="-fx-font-size: 16px;" text="In-Person or Virtual" />
+      <ComboBox fx:id="formatComboBox">
+         <items>
+            <FXCollections fx:factory="observableArrayList">
+               <String fx:value="In-Person" />
+               <String fx:value="Virtual" />
+            </FXCollections>
+         </items>
+      </ComboBox>
+
+      <!-- Submit -->
+      <Button alignment="CENTER" onAction="#handleSubmit" style="-fx-background-color: black; -fx-text-fill: white; -fx-font-weight: bold;" text="Submit" />
+   </VBox>
+</AnchorPane>

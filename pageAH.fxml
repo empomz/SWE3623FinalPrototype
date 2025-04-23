@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<VBox fx:id="vbox" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="605.0" prefWidth="283.0" spacing="20.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.recommended.pageAHController">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+    </padding>
+    <children>
+        <ImageView fx:id="screen" fitHeight="630.0" fitWidth="283.0" pickOnBounds="true" preserveRatio="true" translateY="280.0" VBox.vgrow="NEVER">
+            <image>
+                <Image url="@../../../pageAH.png" />
+            </image>
+            <viewport>
+                <Rectangle2D />
+            </viewport>
+        </ImageView>
+        <Button fx:id="enrollButton" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#enrollClasses" prefHeight="60.0" prefWidth="160.0" text="Enroll" textFill="#fdbc2c" translateY="180.0">
+            <VBox.margin>
+                <Insets />
+            </VBox.margin>
+            <font>
+                <Font size="26.0" />
+            </font>
+        </Button>
+        <Button fx:id="mainButton" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="30.0" prefWidth="30.0" translateX="-106.0" translateY="-350.0" />
+        <Button fx:id="profileButton" layoutX="144.0" layoutY="754.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="30.0" prefWidth="30.0" translateX="-53.0" translateY="-400.0" />
+        <Button fx:id="scheduleButton" alignment="CENTER" layoutX="144.0" layoutY="776.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="30.0" prefWidth="30.0" translateX="2.0" translateY="-450.0" />
+        <Button fx:id="advisorButton" layoutX="144.0" layoutY="799.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="30.0" prefWidth="30.0" translateX="60.0" translateY="-500.0" />
+        <Button fx:id="logoutButton" layoutX="144.0" layoutY="821.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="30.0" prefWidth="30.0" translateX="115.0" translateY="-550.0" />
+      <CheckBox fx:id="one" mnemonicParsing="false" translateX="-110.0" translateY="-400.0" />
+      <CheckBox fx:id="two" mnemonicParsing="false" translateX="-110.0" translateY="-384.0" />
+      <CheckBox fx:id="three" mnemonicParsing="false" translateX="-112.0" translateY="-370.0" />
+      <CheckBox fx:id="four" mnemonicParsing="false" translateX="-112.0" translateY="-358.0" />
+      <CheckBox fx:id="five" mnemonicParsing="false" translateX="-110.0" translateY="-350.0" />
+      <Button fx:id="back" mnemonicParsing="false" onAction="#goBack" text="Back" translateX="-110.0" translateY="-320.0" />
+    </children>
+</VBox>

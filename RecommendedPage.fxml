@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<VBox fx:id="vbox" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="605.0" prefWidth="283.0" spacing="20.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.recommended.RecommendedController">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+    </padding>
+    <children>
+        <ImageView fx:id="screen" fitHeight="618.0" fitWidth="283.0" pickOnBounds="true" preserveRatio="true" translateY="320.0" VBox.vgrow="NEVER">
+            <image>
+                <Image url="@../../../RecommendedPage.png" />
+            </image>
+            <viewport>
+                <Rectangle2D />
+            </viewport>
+        </ImageView>
+        <ChoiceBox fx:id="selectMajor" layoutX="60.0" layoutY="732.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="40.0" prefWidth="260.0" translateY="-145.0">
+            <VBox.margin>
+                <Insets />
+            </VBox.margin>
+        </ChoiceBox>
+        <ChoiceBox fx:id="selectYear" layoutX="27.0" layoutY="598.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="40.0" prefWidth="260.0" translateY="-100.0" />
+        <Button fx:id="button" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#submitButton" prefHeight="50.0" prefWidth="160.0" text="Submit" textFill="#fdbc2c" translateY="100.0">
+            <VBox.margin>
+                <Insets />
+            </VBox.margin>
+            <font>
+                <Font size="26.0" />
+            </font>
+        </Button>
+        <Label fx:id="majorLabel" text="Select Major:" translateX="-90.0" translateY="-365.0">
+            <font>
+                <Font size="15.0" />
+            </font>
+        </Label>
+        <Label fx:id="yearLabel" text="Select Year:" translateX="-95.0" translateY="-300.0">
+            <font>
+                <Font size="15.0" />
+            </font>
+        </Label>
+        <Button fx:id="mainButton" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="30.0" prefWidth="30.0" translateX="-107.0" translateY="-492.0" />
+        <Button fx:id="profileButton" layoutX="144.0" layoutY="754.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="30.0" prefWidth="30.0" translateX="-55.0" translateY="-542.0" />
+        <Button fx:id="scheduleButton" layoutX="144.0" layoutY="776.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="30.0" prefWidth="30.0" translateY="-592.0" />
+        <Button fx:id="advisorButton" layoutX="144.0" layoutY="799.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="30.0" prefWidth="30.0" translateX="55.0" translateY="-643.0" />
+        <Button fx:id="logoutButton" layoutX="144.0" layoutY="821.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="30.0" prefWidth="30.0" translateX="110.0" translateY="-692.0" />
+      <CheckBox fx:id="morningClasses" mnemonicParsing="false" translateX="-100.0" translateY="-384.0" />
+      <CheckBox fx:id="afternoonClasses" mnemonicParsing="false" translateX="-100.0" translateY="-392.0" />
+      <CheckBox fx:id="eveningClasses" mnemonicParsing="false" translateX="-100.0" translateY="-400.0" />
+    </children>
+</VBox>

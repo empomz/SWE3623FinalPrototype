@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="700" prefWidth="500" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.swe3623prototype.DebitPageController">
+
+    <!-- Header -->
+    <HBox alignment="CENTER_LEFT" layoutX="138.0" layoutY="23.0" spacing="10" AnchorPane.leftAnchor="138.0" AnchorPane.topAnchor="23.0">
+        <Label prefHeight="32.0" prefWidth="182.0" style="-fx-font-size: 22px; -fx-font-weight: bold;" text="KSU Student App" />
+        <ImageView fitHeight="49.0" fitWidth="56.0" preserveRatio="true">
+            <image>
+                <Image url="@../../../ksu_logo.png" />
+            </image>
+        </ImageView>
+    </HBox>
+
+
+    <!-- Navigation Bar -->
+    <HBox alignment="CENTER" layoutX="81.0" layoutY="82.0" spacing="15" AnchorPane.leftAnchor="81.0">
+        <Button fx:id="mainButton" onAction="#goToMain" text="Main" />
+        <Button fx:id="profileButton" onAction="#goToProfile" text="Profile" />
+        <Button fx:id="SDSButton" onAction="#goToSchedule" text="Schedule" />
+        <Button fx:id="AdvisorButton" onAction="#goToAdvisor" text="Advisor" />
+        <Button fx:id="logOutButton" onAction="#logout" text="Logout" />
+    </HBox>
+    <Pane layoutX="20.0" layoutY="115.0" prefHeight="577.0" prefWidth="466.0">
+        <children>
+            <Text layoutX="86.0" layoutY="62.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Credit/Debit Payments">
+                <font>
+                    <Font name="Arial Black" size="24.0" />
+                </font>
+            </Text>
+         <VBox layoutX="36.0" layoutY="89.0" prefHeight="287.0" prefWidth="215.0">
+            <children>
+               <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Card Number">
+                  <font>
+                     <Font name="Arial Black" size="14.0" />
+                  </font>
+               </Text>
+               <TextField />
+               <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Name of Holder">
+                  <font>
+                     <Font name="Arial Black" size="14.0" />
+                  </font>
+               </Text>
+               <TextField />
+               <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Expiration Month/Year (MM/YY)">
+                  <font>
+                     <Font name="Arial Black" size="14.0" />
+                  </font>
+               </Text>
+               <TextField />
+               <Text strokeType="OUTSIDE" strokeWidth="0.0" text="CVC (3 Digits)">
+                  <font>
+                     <Font name="Arial Black" size="14.0" />
+                  </font>
+               </Text>
+               <TextField />
+            </children>
+         </VBox>
+         <Button fx:id="submit" layoutX="162.0" layoutY="376.0" mnemonicParsing="false" onAction="#submit" prefHeight="95.0" prefWidth="141.0" text="Submit">
+            <font>
+               <Font name="Arial Black" size="18.0" />
+            </font>
+         </Button>
+        </children>
+    </Pane>
+</AnchorPane>
